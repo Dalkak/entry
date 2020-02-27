@@ -3,16 +3,12 @@ import {
     Block,
 } from "dalkak";
 
-export default new Extension({
-    name: "extension name",
-    color: 0xDE5C04, // Background color of blocks
-    blocks: {
-        block: new Block({
-            name: "block name",
-            template: "{example (input)}",
-            func: ({input}, project) => {
+import message_cast from "./blocks/message_cast";
 
-            }
-        }),
+export default new Extension({
+    name: "entry-start",
+    color: 0x00B400, // Background color of blocks
+    blocks: {
+        message_cast
     },
 });

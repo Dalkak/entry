@@ -1,12 +1,12 @@
 {
-  "name": "@dalkak/template",
+  "name": "@dalkak/entry-start",
   "version": "0.1.0",
   "description": "Basic template for Dalkak extension",
   "source": "index.ts",
   "main": "dist/index.umd.js",
   "unpkg": "dist/index.umd.js",
   "scripts": {
-    "build": "microbundle --name @dalkak/template"
+    "build": "microbundle --name @dalkak/entry-start"
   },
   "repository": {
     "type": "git",

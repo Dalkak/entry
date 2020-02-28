@@ -4,9 +4,9 @@ import {
     Event,
 } from "dalkak";
 
-import message_cast from "./blocks/message_cast";
+import message_cast from "./blocks/start/message_cast";
 
-export default new Extension({
+export const start = new Extension({
     name: "entry-start",
     color: 0x00B400, // Background color of blocks
     blocks: {
@@ -19,5 +19,18 @@ export default new Extension({
         run(){
             this.events.when_run_button_click.fire();
         }
+    },
+});
+
+import wait_second from "./blocks/flow/wait_second";
+
+export const flow = new Extension({
+    name: "entry-flow",
+    color: 0x17A6D1, // Background color of blocks
+    blocks: {
+        wait_second
+    },
+    events: {
+
     },
 });

@@ -4,7 +4,7 @@ import {
     Event,
 } from "dalkak";
 
-import message_cast from "./blocks/start/message_cast";
+import {message_cast} from "./blocks/start";
 
 export const start = new Extension({
     name: "entry-start",
@@ -22,7 +22,7 @@ export const start = new Extension({
     },
 });
 
-import wait_second from "./blocks/flow/wait_second";
+import {wait_second} from "./blocks/flow";
 
 export const flow = new Extension({
     name: "entry-flow",

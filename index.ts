@@ -22,14 +22,12 @@ export const start = new Extension({
     },
 });
 
-import {wait_second} from "./blocks/flow";
+import * as flowBlock from "./blocks/flow";
 
 export const flow = new Extension({
     name: "entry-flow",
     color: 0x17A6D1, // Background color of blocks
-    blocks: {
-        wait_second
-    },
+    blocks: flowBlock,
     events: {
 
     },

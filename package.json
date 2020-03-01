@@ -1,23 +1,23 @@
 {
-  "name": "@dalkak/entry-start",
+  "name": "@dalkak/entry",
   "version": "0.1.0",
   "description": "Basic template for Dalkak extension",
   "source": "index.ts",
   "main": "dist/index.umd.js",
   "unpkg": "dist/index.umd.js",
   "scripts": {
-    "build": "microbundle --name @dalkak/entry-start"
+    "build": "microbundle --name @dalkak/entry"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dalkak/template.git"
+    "url": "git+https://github.com/Dalkak/entry.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Dalkak/template/issues"
+    "url": "https://github.com/Dalkak/entry/issues"
   },
-  "homepage": "https://github.com/Dalkak/template#readme",
+  "homepage": "https://github.com/Dalkak/entry#readme",
   "dependencies": {
     "dalkak": "^0.8.0"
   },

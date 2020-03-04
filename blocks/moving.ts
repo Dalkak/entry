@@ -45,9 +45,10 @@ export const locate_xy = new Block({
 export const locate = new Block({
     pack: basic,
     name: "locate",
-    template: "(value: Thing) 위치로 이동하기 (_target: Thing)",
-    func: ({value, _target}: {value: Thing, _target: Thing}) => {
-        _target.pos.x = value.pos.x;
-        _target.pos.y = value.pos.y;
+    template: "(value) 위치로 이동하기 (_target: Thing)",
+    func: ({value, _target}: {value: string, _target: Thing}, project) => {
+        let valueThing = project.thingGroup.children.find(thing => thing.name == value);
+        _target.pos.x = valueThing.pos.x;
+        _target.pos.y = valueThing.pos.y;
     }
 });

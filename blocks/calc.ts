@@ -1,4 +1,4 @@
-import { Block } from "dalkak";
+import { Block, Thing } from "dalkak";
 import basic from "@dalkak/basic";
 
 export const calc_basic = new Block({
@@ -92,7 +92,7 @@ export const calc_operation = new Block({
 export const get_date = new Block({
     pack: basic,
     name: "get_date",
-    template: "((operator)): number",
+    template: "(현재 (operator)): number",
     func: ({operator}: {operator: string}) => {
         switch(operator){
             case "YEAR":
@@ -109,4 +109,54 @@ export const get_date = new Block({
                 return (new Date()).getSeconds();
         }
     }
+});
+export const distance_something = new Block({
+    pack: basic,
+    name: "distance_something",
+    template: "((value) 까지의 거리 (_target: Thing))",
+    func: ({value, _target}: {value: string, _target: Thing}, project) => {
+        let valueThing = project.thingGroup.children.find(thing => thing.name == value);
+        return Math.sqrt(
+            Math.pow(valueThing.pos.x - _target.pos.x, 2) +
+            Math.pow(valueThing.pos.y - _target.pos.y, 2)
+        );
+    }
+});
+export const length_of_string = new Block({
+    name: "length_of_string",
+    template: "((value)의 글자 수)",
+    func: ({value}) => value.length
+});
+export const combine_something = new Block({
+    name: "combine_something",
+    template: "((a) 과 (b)를 합치기)",
+    func: ({a, b}) => a + b
+});
+export const char_at = new Block({
+    pack: basic,
+    name: "char_at",
+    template: "((value)의 (n: number)번째 글자)",
+    func: ({value, n}) => value[n]
+});
+export const substring = new Block({
+    pack: basic,
+    name: "substring",
+    template: "((value)의 (a: number)번째 글자부터 (b: number)번째 글자까지의 글자)",
+    func: ({value, a, b}: {value: string, a: number, b: number}) => value.substring(Math.min(a, b), Math.max(a, b) + 1)
+});
+export const index_of_string = new Block({
+    pack: basic,
+    name: "index_of_string",
+    template: "((str)에서 (target)의 시작 위치)",
+    func: ({str, target}: {str: string, target: string}) => str.indexOf(target) + 1
+});
+export const replace_string = new Block({
+    name: "replace_string",
+    template: "((value)의 (a)를 (b)로 바꾸기)",
+    func: ({value, a, b}: {value: string, a: string, b: string}) => value.replace(a, b)
+});
+export const change_string_case = new Block({
+    name: "change_string_case",
+    template: "((value)의 (option))",
+    func: ({value, option}: {value: string, option: string}) => value[option]()
 });

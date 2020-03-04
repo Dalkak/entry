@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/Dalkak/entry#readme",
   "dependencies": {
-    "dalkak": "^0.8.2"
+    "@dalkak/basic": "^0.1.0",
+    "dalkak": "^0.8.4"
   },
   "devDependencies": {
     "microbundle": "^0.12.0-next.8"

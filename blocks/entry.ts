@@ -11,7 +11,7 @@ export const text = new Block({
 export const number = new Block({
     pack: basic,
     name: "number",
-    template: "((num: number))",
+    template: "((num: number)): number",
     func: ({num}) => {
         return num;
     }

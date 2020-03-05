@@ -16,3 +16,17 @@ export const number = new Block({
         return num;
     }
 });
+export const True = new Block({
+    name: "True",
+    template: "<참>",
+    func: () => {
+        return true;
+    }
+});
+export const False = new Block({
+    name: "False",
+    template: "<거짓>",
+    func: () => {
+        return false;
+    }
+});

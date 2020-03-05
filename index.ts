@@ -52,3 +52,8 @@ export const variable = new Extension({
     color: 0xDD47D8, 
     blocks: variableBlock,
 });
+import * as entryBlock from "./blocks/entry";
+export const entry = new Extension({
+    name: "entry-entry",
+    blocks: entryBlock,
+});

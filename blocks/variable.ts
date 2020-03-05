@@ -58,7 +58,7 @@ export const insert_value_to_list = new Block({
 export const change_value_list_index = new Block({
     pack: basic,
     name: "change_value_list_index",
-    template: "{(name) (index: number)번째 항목을 (value)로 바꾸기기}",
+    template: "{(name) (index: number)번째 항목을 (value)로 바꾸기}",
     func: ({name, index, value}, project) => {
         project.variables.value[name].value[index - 1] = value;
     }

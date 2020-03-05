@@ -13,7 +13,7 @@ export const number = new Block({
     name: "number",
     template: "((num: number)): number",
     func: ({num}) => {
-        return num;
+        return Number(num);
     }
 });
 export const True = new Block({

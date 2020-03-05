@@ -23,12 +23,32 @@ export const start = new Extension({
 });
 
 import * as flowBlock from "./blocks/flow";
-
 export const flow = new Extension({
     name: "entry-flow",
-    color: 0x17A6D1, // Background color of blocks
+    color: 0x17A6D1, 
     blocks: flowBlock,
-    events: {
-
-    },
+});
+import * as movingBlock from "./blocks/moving";
+export const moving = new Extension({
+    name: "entry-moving",
+    color: 0xAD3EFB, 
+    blocks: movingBlock,
+});
+import * as judgementBlock from "./blocks/judgement";
+export const judgement = new Extension({
+    name: "entry-judgement",
+    color: 0x4562F5, 
+    blocks: judgementBlock,
+});
+import * as calcBlock from "./blocks/calc";
+export const calc = new Extension({
+    name: "entry-calc",
+    color: 0xF4AF18, 
+    blocks: calcBlock,
+});
+import * as variableBlock from "./blocks/variable";
+export const variable = new Extension({
+    name: "entry-variable",
+    color: 0xDD47D8, 
+    blocks: variableBlock,
 });

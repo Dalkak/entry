@@ -1,6 +1,6 @@
 {
   "name": "@dalkak/entry",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Basic template for Dalkak extension",
   "source": "index.ts",
   "main": "dist/index.umd.js",

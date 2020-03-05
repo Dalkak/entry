@@ -6,7 +6,7 @@ export const get_variable = new Block({
     template: "((name) 값)",
     func: ({name}, project) => {
         if(!project.variables.value[name]){
-            project.variables.value[name] = new Variable({name});
+            project.variables.value[name] = new Variable({name, value: 0});
         }
         return project.variables.value[name].value;
     }
@@ -17,9 +17,9 @@ export const change_variable = new Block({
     template: "{(name)에 (value: number)만큼 더하기}",
     func: ({name, value}, project) => {
         if(!project.variables.value[name]){
-            project.variables.value[name] = new Variable({name});
+            project.variables.value[name] = new Variable({name, value: 0});
         }
-        project.variables.value[name].value += value;
+        project.variables.value[name].value += Number(value);
     }
 });
 export const set_variable = new Block({
@@ -28,7 +28,7 @@ export const set_variable = new Block({
     template: "{(name)를 (value)로 정하기}",
     func: ({name, value}, project) => {
         if(!project.variables.value[name]){
-            project.variables.value[name] = new Variable({name});
+            project.variables.value[name] = new Variable({name, value: 0});
         }
         project.variables.value[name].value = value;
     }

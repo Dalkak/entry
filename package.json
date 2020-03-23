@@ -1,6 +1,6 @@
 {
   "name": "@dalkak/entry",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Basic template for Dalkak extension",
   "source": "index.ts",
   "main": "dist/index.umd.js",
@@ -21,7 +21,7 @@
   "homepage": "https://github.com/Dalkak/entry#readme",
   "dependencies": {
     "@dalkak/basic": "^0.1.0",
-    "dalkak": "^0.9.1-next.0"
+    "dalkak": "^0.9.1-next.4"
   },
   "devDependencies": {
     "microbundle": "^0.12.0-next.8"

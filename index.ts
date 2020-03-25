@@ -1,8 +1,8 @@
 import {
     Extension,
-    Block,
     Event,
     Pack,
+    Project,
 } from "dalkak";
 
 import {message_cast} from "./blocks/start";
@@ -17,8 +17,8 @@ export const start = new Extension({
         when_run_button_click: new Event("when_run_button_click")
     },
     on: {
-        run(this: Pack){
-            this.events.value.when_run_button_click.fire();
+        run(this: Pack, project: Project){
+            this.events.value.when_run_button_click.fire(project);
         }
     },
 });

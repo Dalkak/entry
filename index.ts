@@ -4,6 +4,7 @@ import {
     Pack,
     Project,
     Local,
+    Platform,
 } from "dalkak";
 
 import {message_cast} from "./blocks/start";
@@ -18,8 +19,8 @@ export const start = new Extension({
         when_run_button_click: new Event("when_run_button_click")
     },
     on: {
-        run(this: Pack, project: Project, local: Local){
-            this.events.value.when_run_button_click.fire(project, local);
+        run(this: Pack, project: Project, local: Local, platform: Platform){
+            this.events.value.when_run_button_click.fire(project, local, platform);
         }
     },
 });
